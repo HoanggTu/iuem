@@ -135,8 +135,8 @@ async function inipesan() {
   } else {
     await Swal.fire({
       icon: 'warning',
-      title: 'Tên không được để trống!',
-      confirmButtonText: 'Nhập lại'
+      title: 'Hư quá, không được để trống biết chưa!',
+      confirmButtonText: 'Nhập lại mau'
     });
     inipesan();
   }
