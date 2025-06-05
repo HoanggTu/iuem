@@ -81,9 +81,20 @@ body {
 }
 
 .love-icon {
-  font-size: 40px;
+  position: relative;
+  font-size: 2rem;
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.love-letter {
+  position: absolute;
+  font-size: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+  pointer-events: none;
 }
 
 .love-icon.tapped {

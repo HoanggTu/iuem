@@ -69,12 +69,13 @@ function switchStage(fromId, toId, withFade = false) {
     toElement.style.display = 'block';
   }
 }
-
+const loveText = "LOVE"
 function tapLove(id) {
   if (loveTaps.has(id)) return;
 
-  const loveIcon = document.querySelector(`#loveIcons .love-icon:nth-child(${id})`);
+  const loveIcon = document.querySelector(`#loveIcons .love-icon:nth-child(${id}) .love-letter`);
   loveIcon.classList.add('tapped');
+  loveIcon.textContent = loveText[id - 1];
   loveTaps.add(id);
   console.log(`Chạm love ${id}, tổng: ${loveTaps.size}`);
 
@@ -98,7 +99,7 @@ function tapLove(id) {
         () => {
           const fromTag = document.createElement("div");
           fromTag.id = 'fromTag';
-          fromTag.textContent = "From: Tu With love";
+          fromTag.textContent = "From: Tú With love";
           fromTag.style.marginTop = "20px";
           fromTag.style.opacity = "0";
           fromTag.style.transition = "opacity 1s ease";
@@ -135,8 +136,8 @@ async function inipesan() {
   } else {
     await Swal.fire({
       icon: 'warning',
-      title: 'Hư quá, không được để trống biết chưa!',
-      confirmButtonText: 'Nhập lại mau'
+      title: 'Ứ chịu đâu, Nhập tên của bé điiiii!!',
+      confirmButtonText: 'Nhập lại'
     });
     inipesan();
   }
