@@ -81,8 +81,8 @@ function tapLove(id) {
 
   if (loveTaps.size === 4) {
     Swal.fire({
-      title: 'Đủ 4 love rồi nè!',
-      text: 'Sẵn sàng nhận quà chưa? 💖',
+      title: 'Đủ điều kiện rồi nè!',
+      text: 'Xin hãy nhận lời chúc ạ? 💖',
       timer: 1500,
       showConfirmButton: false,
       background: '#fffbe7',
@@ -94,12 +94,14 @@ function tapLove(id) {
       if (!loveMsg) return console.error('Không tìm thấy element loveMsg!');
 
       typeWriterEffect(
-        `Chúc ${userName} của anh  thật vui vẻ như một đứa trẻ, nhưng được anh yêu như một nữ hoàng 👑. Dù em có lớn bao nhiêu thì trong tim anh, em vẫn là công chúa bé bỏng cần được cưng chiều mỗi ngày! 💘`,
+        // `Chúc ${userName} của anh  thật vui vẻ như một đứa trẻ, nhưng được anh yêu như một nữ hoàng 👑. Dù em có lớn bao nhiêu thì trong tim anh, em vẫn là công chúa bé bỏng cần được cưng chiều mỗi ngày! 💘`,
+        `Chúc mừng sinh nhật ${userName} ! Chúc cô luôn luôn mạnh khỏe, hạnh phúc và ngập tràn năng lượng tích cực mỗi ngày.Mong tuổi mới sẽ mang đến cho cô thật nhiều niềm vui, những kỷ niệm đẹp và những điều bất ngờ tuyệt vời
+         Chúc cô một ngày sinh nhật thật ý nghĩa, trọn vẹn và đáng nhớ! 🎂💐💖.`,
         'loveMsg',
         () => {
           const fromTag = document.createElement("div");
           fromTag.id = 'fromTag';
-          fromTag.textContent = "From: Tú With love";
+          fromTag.textContent = "From: Tú";
           fromTag.style.marginTop = "20px";
           fromTag.style.opacity = "0";
           fromTag.style.transition = "opacity 1s ease";
@@ -116,7 +118,7 @@ function tapLove(id) {
 
 async function inipesan() {
   const { value: typedName } = await Swal.fire({
-    title: 'Nhập Tên Của Bé Iuu đi',
+    title: 'Cần phải nhập tên đó ạ!',
     input: 'text',
     inputValue: '',
     allowOutsideClick: false,
@@ -136,8 +138,8 @@ async function inipesan() {
   } else {
     await Swal.fire({
       icon: 'warning',
-      title: 'Ứ chịu đâu, Nhập tên của bé điiiii!!',
-      confirmButtonText: 'Nhập lại'
+      title: 'NÔ nô, không được bỏ trống!!',
+      confirmButtonText: 'Nhập lại đi ạ'
     });
     inipesan();
   }
