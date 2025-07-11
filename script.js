@@ -95,7 +95,7 @@ function tapLove(id) {
 
       typeWriterEffect(
         // `Chúc ${userName} của anh  thật vui vẻ như một đứa trẻ, nhưng được anh yêu như một nữ hoàng 👑. Dù em có lớn bao nhiêu thì trong tim anh, em vẫn là công chúa bé bỏng cần được cưng chiều mỗi ngày! 💘`,
-        `Chúc mừng sinh nhật ${userName} ! Chúc Dì ngập tràn năng lượng tích cực mỗi ngày. Mong tuổi mới sẽ mang đến cho cô thật nhiều niềm vui, công việc cũng như sự nghiệp phát triển hơn nữa cùng với những kỷ niệm đẹp và những điều bất ngờ tuyệt vời
+        `Chúc mừng sinh nhật ${userName} ! Chúc Dì ngập tràn năng lượng tích cực mỗi ngày. Mong tuổi mới sẽ mang đến cho Dì thật nhiều niềm vui, công việc cũng như sự nghiệp phát triển hơn nữa cùng với những kỷ niệm đẹp và những điều bất ngờ tuyệt vời
          Chúc Dì một ngày sinh nhật thật ý nghĩa, trọn vẹn và đáng nhớ! 🎂💐💖.`,
         'loveMsg',
         () => {
